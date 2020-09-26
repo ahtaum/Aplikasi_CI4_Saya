@@ -57,7 +57,7 @@
                   <td><?= $x['komentar']; ?></td>
                   <td><?= $x['created_at']; ?></td>
                   <td><?= $x['updated_at']; ?></td>
-                  <form action="/dataku/<?= $x['id']; ?>" method="post" class="d-inline">
+                  <form action="/dataku/hapus/<?= $x['id']; ?>" method="post" class="d-inline">
                     <?= csrf_field(); ?>
                     <input type="hidden" name="_method" value="DELETE">
                     <td><button type="submit" class="btn btn-danger" onclick="return confirm('Apakah ente yaqin ?')" name="mahasiswahapus">Hapus</button></td>

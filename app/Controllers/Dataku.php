@@ -92,9 +92,11 @@ class Dataku extends BaseController
                     ]
                 ],
                 'nim' => [
-                    'rules' => 'required|is_unique[mahasiswa.nim]',
+                    'rules' => 'required|min_length[9]|max_length[9]|is_unique[mahasiswa.nim]',
                     'errors' => [
                         'required' => '{field} harus di isi',
+                        'min_length' => 'karakter harus 9 digit',
+                        'max_length' => 'karakter harus 9 digit',
                         'is_unique' => '{field} sudah ada'
                     ]
                 ],
@@ -117,9 +119,11 @@ class Dataku extends BaseController
                     ]
                 ],
                 'nik' => [
-                    'rules' => 'required|is_unique[dosen.nik]',
+                    'rules' => 'required|min_length[9]|max_length[9]|is_unique[dosen.nik]',
                     'errors' => [
                         'required' => '{field} harus di isi',
+                        'min_length' => 'karakter harus 9 digit',
+                        'max_length' => 'karakter harus 9 digit',
                         'is_unique' => '{field} sudah ada'
                     ]
                 ],

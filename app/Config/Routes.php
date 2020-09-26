@@ -32,9 +32,9 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Utama::index');
-$routes->get('/buku/ubah/(:num)', 'Dataku::ubah/$1');
-$routes->get('/buku/(:num)', 'Dataku::detail/$1');
-$routes->get('/buku/(:num)', 'Dataku::detailDosen/$1');
+$routes->get('/dataku/ubah/(:num)', 'Dataku::ubah/$1');
+$routes->get('/dataku/(:num)', 'Dataku::detail/$1');
+$routes->get('/dataku/(:num)', 'Dataku::detailDosen/$1');
 $routes->delete('/dataku/(:num)', 'Dataku::hapus/$1');
 
 /**
