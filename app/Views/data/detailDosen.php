@@ -13,7 +13,9 @@
                     <h6 class="card-subtitle mb-2 text-muted">Jenis Kelamin : <?= $tampildetaildosen['jk']; ?></h6>
                     <h6 class="card-subtitle mb-2 text-muted">Judul Skripsi</h6>
                     <a href="/dataku" class="card-link btn btn-primary">Kembali</a>
-                    <a href="/dataku" class="card-link btn btn-success">Update</a>
+                    <form action="/dataku/ubah/<?= $tampildetaildosen['id']; ?>" method="post" class="d-inline">
+                        <button class="btn btn-success" type="submit" name="ubahDosen">Ubah</button>
+                    </form>
                 </div>
             </div>
         </div>

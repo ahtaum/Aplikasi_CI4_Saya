@@ -32,10 +32,19 @@ class Dataku extends BaseController
     {
         $data = [
             'title' => 'Ubah Data',
-            'datanya' => $this->dataMahasiswa->getMahasiswaCek($id)
+            'datanya' => $this->dataMahasiswa->getMahasiswaCek($id),
+            'datanyaDosen' => $this->dataDosen->getDosenCek($id)
         ];
 
-        return view('data/ubah', $data);
+        $dosenUbahHalaman = $this->request->getVar('ubahDosen');
+
+        if (isset($dosenUbahHalaman) == true) {
+            return view('data/ubahdosen', $data);
+        } else {
+            return view('data/ubah', $data);
+        }
+
+        //return view('data/ubah', $data);
     }
 
     public function detail($id)
@@ -177,17 +186,34 @@ class Dataku extends BaseController
 
     public function update($id)
     {
-        $this->dataMahasiswa->save([
-            'id' => $id,
-            'nama' => $this->request->getVar('nama'),
-            'nim' => $this->request->getVar('nim'),
-            'ipk' => $this->request->getVar('ipk'),
-            'jk' => $this->request->getVar('jk')
-        ]);
 
-        session()->setFlashdata('pesan', 'Data berhasil di ubah.');
+        $mahasiswaUbah = $this->request->getVar('mahasiswaubah');
+        $dosenUbah = $this->request->getVar('dosenUbah');
 
-        // klo dah simpen data kembali ke halaman /buku/index
-        return redirect()->to('/dataku');
+        if (isset($mahasiswaUbah) == true) {
+            // update mahasiswa
+            $this->dataMahasiswa->save([
+                'id' => $id,
+                'nama' => $this->request->getVar('nama'),
+                'nim' => $this->request->getVar('nim'),
+                'ipk' => $this->request->getVar('ipk'),
+                'jk' => $this->request->getVar('jk')
+            ]);
+            session()->setFlashdata('pesan', 'Data berhasil di ubah.');
+            // klo dah simpen data kembali ke halaman /buku/index
+            return redirect()->to('/dataku');
+        } else {
+            // update dosen
+            $this->dataDosen->save([
+                'id' => $id,
+                'nama' => $this->request->getVar('nama'),
+                'nik' => $this->request->getVar('nik'),
+                'bidangkeahlian' => $this->request->getVar('bidangkeahlian'),
+                'jk' => $this->request->getVar('jk')
+            ]);
+
+            session()->setFlashdata('pesan', 'Data berhasil di ubah.');
+            return redirect()->to('/dataku');
+        }
     }
 }

@@ -47,6 +47,7 @@
                         <div class="form-group row">
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-primary" name="mahasiswa">Tambah</button>
+                                <a href="/dataku" class="btn btn-danger">Kembali</a>
                             </div>
                         </div>
                     </form>

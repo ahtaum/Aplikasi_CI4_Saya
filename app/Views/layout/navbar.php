@@ -8,7 +8,7 @@
       <div class="navbar-nav">
         <a class="nav-link active" href="/utama">Home</a>
         <a class="nav-link" href="/dataku">Data</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link" href="/login/loginWeb">Login</a>
       </div>
     </div>
   </div>

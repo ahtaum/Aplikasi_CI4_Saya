@@ -36,6 +36,7 @@ $routes->get('/dataku/ubah/(:num)', 'Dataku::ubah/$1');
 $routes->get('/dataku/(:num)', 'Dataku::detail/$1');
 $routes->get('/dataku/(:num)', 'Dataku::detailDosen/$1');
 $routes->delete('/dataku/(:num)', 'Dataku::hapus/$1');
+$routes->post('login/loginWeb', 'Login::auth');
 
 /**
  * --------------------------------------------------------------------
