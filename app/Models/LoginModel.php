@@ -10,10 +10,7 @@ class LoginModel extends Model
     protected $allowedFields = ['nama', 'nim'];
     protected $useTimestamps = true;
 
-    public function cekLogin($username, $password)
-    {
-        return $this->where(['nama' => $username, 'nim' => $password])->first();
-    }
+
 
     // public function getMahasiswaCek($id = false)
     // {

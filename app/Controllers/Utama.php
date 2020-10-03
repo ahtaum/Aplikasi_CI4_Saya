@@ -1,12 +1,20 @@
-<?php namespace App\Controllers;
+<?php
 
-class Utama extends BaseController {
+namespace App\Controllers;
 
-	public function index() {
+class Utama extends BaseController
+{
+
+  public function index()
+  {
+    if (session()->get('nama') == '') {
+      session()->setFlashdata('pesan', 'Anda Harus Login !!!');
+      return redirect()->to('login/loginWeb');
+    }
+
     $data = [
       'title' => 'Halaman Utama'
     ];
-		return view('utama/index', $data);
-	}
-
+    return view('utama/index', $data);
+  }
 }

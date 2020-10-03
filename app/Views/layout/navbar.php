@@ -8,7 +8,7 @@
       <div class="navbar-nav">
         <a class="nav-link active" href="/utama">Home</a>
         <a class="nav-link" href="/dataku">Data</a>
-        <a class="nav-link" href="/login/loginWeb">Login</a>
+        <a class="nav-link" href="/login/Logout">Logout</a>
       </div>
     </div>
   </div>

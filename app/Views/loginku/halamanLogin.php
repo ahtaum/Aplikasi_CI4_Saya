@@ -9,14 +9,19 @@
                     <h1 class="text-center">Login</h1>
                     <form action="/login/auth">
                         <?= csrf_field(); ?>
+                        <?php if (session()->getFlashdata('pesan')) : ?>
+                            <div class="alert alert-light" role="alert">
+                                <?= session()->getFlashdata('pesan'); ?>
+                            </div>
+                        <?php endif; ?>
                         <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" name="username" placeholder="Username" autofocus required>
-                            <small id="username" class="form-text text-muted">masukan Username Mahasiswa atau Dosen</small>
+                            <label for="nama">Nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="nama" autofocus required>
+                            <small id="nama" class="form-text text-muted">masukan nama Mahasiswa atau Dosen</small>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                            <label for="nim">Nim</label>
+                            <input type="password" class="form-control" id="nim" name="nim" placeholder="nim" required>
                         </div>
                         <button type="submit" class="btn btn-primary" name="login">Submit</button>
                     </form>
