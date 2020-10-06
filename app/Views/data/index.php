@@ -12,6 +12,8 @@
             </div>
           <?php endif; ?>
           <h2 class="font-weight-light mb-3">Tambah data</h2>
+          <h3>Anda adalah : <?= session()->get('nama') ?></h3>
+          <p>anda seorang : <?= session()->get('level') ?></p>
           <a class="btn btn-light mb-4" data-toggle="modal" data-target="#tambah">Tambah</a>
           <h3 class="font-weight-light mb-3">Data Mahasiswa</h3>
           <div class="modal fade" id="tambah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -67,6 +69,7 @@
               <?php endforeach; ?>
           </table>
           <h3 class="font-weight-light my-3">Data Dosen</h3>
+          <p>bug : blom tambahin update di dosen</p>
           <table class="table table-dark">
             <thead>
               <tr>
@@ -99,6 +102,29 @@
                   <td><a href="/dataku/detailDosen/<?= $z['id']; ?>" class="btn btn-primary">Detail</a></td>
                 </tr>
               <?php endforeach; ?>
+          </table>
+          <h3 class="font-weight-light my-3">Data Bimbingan</h3>
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Nama Mahasiswa</th>
+                <th scope="col">Nama Dosen</th>
+                <th scope="col">Nim</th>
+                <th scope="col">Nik</th>
+                <th scope="col">IPK</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($gabung as $v) : ?>
+                <tr>
+                  <th><?= $v['mhs']; ?></th>
+                  <th><?= $v['nama']; ?></th>
+                  <th><?= $v['nim']; ?></th>
+                  <th><?= $v['nik']; ?></th>
+                  <th><?= $v['ipk']; ?></th>
+                </tr>
+              <?php endforeach; ?>
+            </tbody>
           </table>
         </div>
       </div>

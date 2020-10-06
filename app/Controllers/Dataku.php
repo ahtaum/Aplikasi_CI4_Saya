@@ -17,12 +17,29 @@ class Dataku extends BaseController
         $this->dataDosen = new DosenModel();
     }
 
+    // public function proteksi()
+    // {
+    //     if (session()->get('nama') == '') {
+    //         session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+    //         return redirect()->to('login/loginWeb');
+    //     }
+    // }
+
     public function index()
     {
+        //self::proteksi();
+        if (session()->get('nama') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('login/loginWeb');
+        }
+
+
+
         $data = [
             'title' => 'Tentang Saya',
             'cumatabel' => $this->dataMahasiswa->findAll(),
-            'cumatabeldua' => $this->dataDosen->findAll()
+            'cumatabeldua' => $this->dataDosen->findAll(),
+            'gabung' => $this->dataDosen->gabungTabel()
         ];
 
         return view('data/index', $data);
@@ -30,6 +47,10 @@ class Dataku extends BaseController
 
     public function ubah($id)
     {
+        if (session()->get('nama') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('login/loginWeb');
+        }
         $data = [
             'title' => 'Ubah Data',
             'datanya' => $this->dataMahasiswa->getMahasiswaCek($id),
@@ -49,6 +70,10 @@ class Dataku extends BaseController
 
     public function detail($id)
     {
+        if (session()->get('nama') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('login/loginWeb');
+        }
         $data = [
             'title' => 'Detail Mahasiswa',
             'tampildetail' => $this->dataMahasiswa->getMahasiswaCek($id)
@@ -59,6 +84,10 @@ class Dataku extends BaseController
 
     public function detailDosen($id)
     {
+        if (session()->get('nama') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('login/loginWeb');
+        }
         $data = [
             'title' => 'Detail Dosen',
             'tampildetaildosen' => $this->dataDosen->getDosenCek($id)
@@ -69,6 +98,10 @@ class Dataku extends BaseController
 
     public function tambahMahasiswa()
     {
+        if (session()->get('nama') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('login/loginWeb');
+        }
         $data = [
             'title' => 'Tambah Data Mahasiswa',
             'validasi' => \Config\Services::validation()
@@ -78,6 +111,10 @@ class Dataku extends BaseController
     }
     public function tambahDosen()
     {
+        if (session()->get('nama') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('login/loginWeb');
+        }
         $data = [
             'title' => 'Tambah Data Dosen',
             'validasidua' => \Config\Services::validation()
@@ -171,6 +208,11 @@ class Dataku extends BaseController
 
     public function hapus($id)
     {
+        if (session()->get('nama') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('login/loginWeb');
+        }
+
         $hapusLurr = $this->request->getVar('mahasiswahapus');
         $hapusLurrdua = $this->request->getVar('dosenhapus');
 

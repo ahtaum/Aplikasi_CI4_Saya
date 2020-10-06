@@ -9,9 +9,9 @@
                     <h1 class="text-center">Login</h1>
                     <form action="/login/auth">
                         <?= csrf_field(); ?>
-                        <?php if (session()->getFlashdata('pesan')) : ?>
-                            <div class="alert alert-light" role="alert">
-                                <?= session()->getFlashdata('pesan'); ?>
+                        <?php if (session()->getFlashdata('gagal')) : ?>
+                            <div class="alert alert-danger" role="alert">
+                                <?= session()->getFlashdata('gagal'); ?>
                             </div>
                         <?php endif; ?>
                         <div class="form-group">

@@ -1,0 +1,98 @@
+CRITICAL - 2020-10-05 09:30:34 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::join() must be of the type string, object given, called in C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Model.php on line 1818
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Model.php(1818): CodeIgniter\Database\BaseBuilder->join(Object(App\Models\MahasiswaModel), 'id')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(37): CodeIgniter\Model->__call('join', Array)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->index()
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-10-05 09:33:21 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::join() must be of the type string, object given, called in C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Model.php on line 1818
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Model.php(1818): CodeIgniter\Database\BaseBuilder->join(Object(App\Models\MahasiswaModel), 'id')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(37): CodeIgniter\Model->__call('join', Array)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->index()
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-10-05 09:33:25 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::join() must be of the type string, object given, called in C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Model.php on line 1818
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Model.php(1818): CodeIgniter\Database\BaseBuilder->join(Object(App\Models\MahasiswaModel), 'id')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(37): CodeIgniter\Model->__call('join', Array)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->index()
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-10-05 09:33:33 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::join() must be of the type string, object given, called in C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Model.php on line 1818
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Model.php(1818): CodeIgniter\Database\BaseBuilder->join(Object(App\Models\MahasiswaModel), 'id')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(37): CodeIgniter\Model->__call('join', Array)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->index()
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-10-05 09:45:39 --> Cannot use object of type mysqli as array
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/index', Array, true)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(45): view('data/index', Array)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->index()
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2020-10-05 09:46:24 --> Cannot use object of type mysqli as array
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/index', Array, true)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(45): view('data/index', Array)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->index()
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2020-10-05 09:46:39 --> Object of class mysqli could not be converted to string
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/index', Array, true)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(45): view('data/index', Array)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->index()
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2020-10-05 09:47:03 --> Array to string conversion
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Views\data\index.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 117, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/index', Array, true)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(45): view('data/index', Array)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->index()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-10-05 09:47:10 --> Object of class mysqli could not be converted to string
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/index', Array, true)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(45): view('data/index', Array)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->index()
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2020-10-05 21:09:54 --> Undefined index: dosen.nama
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Views\data\index.php(118): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 118, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/index', Array, true)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(45): view('data/index', Array)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->index()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}

@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\LoginModel;
 use phpDocumentor\Reflection\Types\Null_;
+use phpDocumentor\Reflection\Types\This;
 
 class Login extends BaseController
 {
@@ -44,10 +45,15 @@ class Login extends BaseController
 
         if ($this->exists($nama, $nim) != null) {
             $session = session();
-            $session->set('nama', $nama);
+            $datanya = [
+                'nama' => $nama,
+                'nim' => $nim
+            ];
+            $session->set($datanya);
             return $this->response->redirect('/utama');
         } else {
-            echo "tolol";
+            session()->setFlashdata('gagal', 'Username atau password salah');
+            return $this->response->redirect('/Login/loginWeb');
         }
     }
 

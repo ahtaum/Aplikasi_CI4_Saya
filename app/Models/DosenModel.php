@@ -17,4 +17,10 @@ class DosenModel extends Model
         }
         return $this->where(['id' => $id])->first();
     }
+
+    public function gabungTabel()
+    {
+        return $this->db->table('dosen')->select('mahasiswa.nama as mhs,dosen.nama,mahasiswa.nim,dosen.nik,mahasiswa.ipk')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->get()->getResultArray();
+        // return $this->db->table('dosen')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->get()->getResultArray();
+    }
 }

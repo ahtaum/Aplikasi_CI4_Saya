@@ -5,13 +5,17 @@ namespace App\Controllers;
 class Utama extends BaseController
 {
 
+  // public function __construct()
+  // {
+  //   helper('proteksiPkeSession');
+  // }
+
   public function index()
   {
     if (session()->get('nama') == '') {
-      session()->setFlashdata('pesan', 'Anda Harus Login !!!');
+      session()->setFlashdata('gagal', 'Anda Harus Login !!!');
       return redirect()->to('login/loginWeb');
     }
-
     $data = [
       'title' => 'Halaman Utama'
     ];
