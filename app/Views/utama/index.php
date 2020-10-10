@@ -8,11 +8,10 @@
       <div class="card-header">Halaman Utama</div>
       <div class="card-body">
         <blockquote class="blockquote mb-0">
-          <p>Selaman Datang <?= session()->get('nama') ?></p>
-          <p>anda seorang : <?= session()->get('level') ?></p>
+          <p>Selamat Datang : <?= session()->get('nama') ?></p>
           <ul class="list-group list-group-flush my-3">
             <li class="list-group-item">bug : blom tambahin update di dosen</li>
-            <li class="list-group-item">belom ada session untuk akun mahasiswa dan dosen</li>
+            <li class="list-group-item">belom ada Pembatasan session untuk akun mahasiswa dan dosen</li>
             <li class="list-group-item">bug : tidak bisa menampilkan level user</li>
             <li class="list-group-item">bug : blom ada fitur validasi di update dosen dan mahasiswa</li>
             <li class="list-group-item">bug : blom ada fitur validasi di Login</li>

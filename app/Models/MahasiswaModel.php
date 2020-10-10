@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class MahasiswaModel extends Model
 {
     protected $table      = 'mahasiswa';
-    protected $allowedFields = ['nama', 'nim', 'ipk', 'jk', 'komentar'];
+    protected $allowedFields = ['nama', 'nim', 'ipk', 'jk', 'level', 'komentar'];
     protected $useTimestamps = true;
 
     public function getMahasiswaCek($id = false)

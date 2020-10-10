@@ -11,6 +11,9 @@
                         <?= csrf_field(); ?>
                         <input type="hidden" class="<?= old('id'); ?>">
                         <div class="form-group row">
+                            <input type="hidden" value="mahasiswa" name="mhs">
+                        </div>
+                        <div class="form-group row">
                             <label for="nama" class="col-sm-2 col-form-label">nama</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control <?= ($validasi->hasError('nama')) ? 'is-invalid' : ''; ?>" id="nama" name="nama" value="<?= old('nama'); ?>">

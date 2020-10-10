@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class DosenModel extends Model
 {
     protected $table      = 'dosen';
-    protected $allowedFields = ['nama', 'nik', 'bidangkeahlian', 'jk'];
+    protected $allowedFields = ['nama', 'nik', 'bidangkeahlian', 'jk', 'level'];
     protected $useTimestamps = true;
 
     public function getDosenCek($id = false)
@@ -21,6 +21,5 @@ class DosenModel extends Model
     public function gabungTabel()
     {
         return $this->db->table('dosen')->select('mahasiswa.nama as mhs,dosen.nama,mahasiswa.nim,dosen.nik,mahasiswa.ipk')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->get()->getResultArray();
-        // return $this->db->table('dosen')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->get()->getResultArray();
     }
 }

@@ -6,10 +6,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" href="/utama">Home</a>
         <a class="nav-link" href="/dataku">Data</a>
+        <a class="nav-link" href="/dataku/registrasiAdmin">Registrasi Admin</a>
+        <a class="nav-link active" href="/dataku/indexMahasiswa">Bimbingan</a>
+        <a class="nav-link active" href="/utama">Home</a>
         <a class="nav-link" href="/login/Logout">Logout</a>
       </div>
     </div>
   </div>
 </nav>
+
+<?php
+
+// if (session()->get('level') == 'mahasiswa') {
+// }
+
+?>

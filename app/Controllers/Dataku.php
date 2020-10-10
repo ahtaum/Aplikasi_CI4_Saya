@@ -4,36 +4,28 @@ namespace App\Controllers;
 
 use App\Models\DosenModel;
 use App\Models\MahasiswaModel;
+use App\Models\LoginModel;
 
 class Dataku extends BaseController
 {
 
     protected $dataMahasiswa;
     protected $dataDosen;
+    protected $admin;
 
     public function __construct()
     {
         $this->dataMahasiswa = new MahasiswaModel();
         $this->dataDosen = new DosenModel();
+        $this->admin = new LoginModel();
     }
-
-    // public function proteksi()
-    // {
-    //     if (session()->get('nama') == '') {
-    //         session()->setFlashdata('gagal', 'Anda Harus Login !!!');
-    //         return redirect()->to('login/loginWeb');
-    //     }
-    // }
 
     public function index()
     {
-        //self::proteksi();
         if (session()->get('nama') == '') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('login/loginWeb');
         }
-
-
 
         $data = [
             'title' => 'Tentang Saya',
@@ -43,6 +35,21 @@ class Dataku extends BaseController
         ];
 
         return view('data/index', $data);
+    }
+
+    public function indexMahasiswa()
+    {
+        if (session()->get('nama') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('login/loginWeb');
+        }
+
+        $data = [
+            'title' => 'saya sayang ibuku',
+            'bimbinganMhs' => $this->dataDosen->gabungTabel()
+        ];
+
+        return view('data/indexmhs', $data);
     }
 
     public function ubah($id)
@@ -64,8 +71,6 @@ class Dataku extends BaseController
         } else {
             return view('data/ubah', $data);
         }
-
-        //return view('data/ubah', $data);
     }
 
     public function detail($id)
@@ -121,6 +126,25 @@ class Dataku extends BaseController
         ];
 
         return view('data/dosen', $data);
+    }
+
+    // Registrasi Admin
+    public function registrasiAdmin()
+    {
+        $data = [
+            'title' => 'Registrasi Admin'
+        ];
+
+        return view('data/registrasi', $data);
+    }
+
+    public function simpanRegistrasi()
+    {
+        $this->admin->save([
+            'nama' => $this->request->getVar('nama'),
+            'nim' => $this->request->getVar('nim'),
+            'level' => $this->request->getVar('adm')
+        ]);
     }
 
     public function simpan()
@@ -192,14 +216,16 @@ class Dataku extends BaseController
                 'nama' => $this->request->getVar('nama'),
                 'nim' => $this->request->getVar('nim'),
                 'ipk' => $this->request->getVar('ipk'),
-                'jk' => $this->request->getVar('jk')
+                'jk' => $this->request->getVar('jk'),
+                'level' => $this->request->getVar('mhs')
             ]);
         } else {
             $this->dataDosen->save([
                 'nama' => $this->request->getVar('nama'),
                 'nik' => $this->request->getVar('nik'),
                 'bidangkeahlian' => $this->request->getVar('bidangkeahlian'),
-                'jk' => $this->request->getVar('jk')
+                'jk' => $this->request->getVar('jk'),
+                'level' => $this->request->getVar('dsn')
             ]);
         }
 

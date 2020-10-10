@@ -3,15 +3,21 @@
 namespace App\Controllers;
 
 use App\Models\LoginModel;
+use App\Models\DosenModel;
+use App\Models\MahasiswaModel;
 use phpDocumentor\Reflection\Types\Null_;
 use phpDocumentor\Reflection\Types\This;
 
 class Login extends BaseController
 {
     protected $login;
+    protected $mahasiswa;
+    protected $dosen;
 
     public function __construct()
     {
+        $this->mahasiswa = new MahasiswaModel();
+        $this->dosen = new DosenModel();
         $this->login = new LoginModel();
     }
 
@@ -24,13 +30,31 @@ class Login extends BaseController
         return view('loginku/halamanLogin', $data);
     }
 
-    private function exists($nama, $nim)
+    private function exists($nama, $password)
     {
         $model = $this->login;
+        $modeldua = $this->mahasiswa;
+        $modeltiga = $this->dosen;
+
         $account = $model->where('nama', $nama)->first();
+        $account2 = $modeldua->where('nama', $nama)->first();
+        $account3 = $modeltiga->where('nama', $nama)->first();
+
+        if ($account2 != NULL) {
+            if ($modeldua->where('nim', $password)->first()) {
+                return $account2;
+            }
+        }
+
+        if ($account3 != NULL) {
+            if ($modeltiga->where('nik', $password)->first()) {
+                return $account3;
+            }
+        }
+
         if ($account != NULL) {
-            //if (password_verify($nim, $account['nim'])) {
-            if ($model->where('nim', $nim)->first()) {
+            //if (password_verify($password, $account['nim'])) {
+            if ($model->where('nim', $password)->first()) {
                 return $account;
                 //}
             }
@@ -41,13 +65,13 @@ class Login extends BaseController
     public function auth()
     {
         $nama = $this->request->getVar('nama');
-        $nim = $this->request->getVar('nim');
+        $password = $this->request->getVar('nim');
 
-        if ($this->exists($nama, $nim) != null) {
+        if ($this->exists($nama, $password) != null) {
             $session = session();
             $datanya = [
                 'nama' => $nama,
-                'nim' => $nim
+                'nim' => $password
             ];
             $session->set($datanya);
             return $this->response->redirect('/utama');
