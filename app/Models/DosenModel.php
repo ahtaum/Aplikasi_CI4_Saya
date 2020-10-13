@@ -22,4 +22,9 @@ class DosenModel extends Model
     {
         return $this->db->table('dosen')->select('mahasiswa.nama as mhs,dosen.nama,mahasiswa.nim,dosen.nik,mahasiswa.ipk')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->get()->getResultArray();
     }
+
+    public function level($nama)
+    {
+        return $this->db->table('dosen')->select('level')->where(['nama', $nama])->get()->getResultArray();
+    }
 }
