@@ -72,25 +72,28 @@ class Login extends BaseController
         $account2 = $modeldua->where('nama', $nama)->first();
         $account3 = $modeltiga->where('nama', $nama)->first();
 
+
+
+        if ($account != NULL) {
+            //if (password_verify($password, $account['nim'])) {
+            if ($model->where('nim', $password)->first() && $model->where('level', $level['admin'])->first() == true) {
+                return $account;
+            }
+            //}
+        }
+
         if ($account2 != NULL) {
-            if ($modeldua->where('nim', $password)->first()) {
+            if ($modeldua->where('nim', $password)->first() && $modeldua->where('level', $level['mahasiswa'])->first()) {
                 return $account2;
             }
         }
 
         if ($account3 != NULL) {
-            if ($modeltiga->where('nik', $password)->first()) {
+            if ($modeltiga->where('nik', $password)->first() && $modeltiga->where('level', $level['dosen'])->first()) {
                 return $account3;
             }
         }
 
-        if ($account != NULL) {
-            //if (password_verify($password, $account['nim'])) {
-            if ($model->where('nim', $password)->first()) {
-                return $account;
-            }
-            //}
-        }
         return NULL;
     }
 
@@ -121,16 +124,25 @@ class Login extends BaseController
     {
         $nama = $this->request->getVar('nama');
         $password = $this->request->getVar('nim');
-        $level = $this->login->findColumn('level');
+        //$level = $this->login->findColumn('level')[0];
+        $level = [
+            // 'admin' => $this->login->findColumn('level')[0],
+            // 'dosen' => $this->dosen->findColumn('level')[0],
+            // 'mahasiswa' => $this->mahasiswa->findColumn('level')[0]
+            'admin' => $this->login->findColumn('level')[0],
+            'dosen' => $this->dosen->findColumn('level')[0],
+            'mahasiswa' => $this->mahasiswa->findColumn('level')[0]
+        ];
 
         if ($this->exists($nama, $password, $level) != null) {
             $session = session();
             //$levell = $this->login->findColumn('level');
             // $level = $this->login->findColumn('level');
+            // $level = $this->login->findColumn('level')[0];
             $datanya = [
                 'nama' => $nama,
                 'nim' => $password,
-                'kasta' => $level
+                'kasta' => $level['admin']
                 //'tolol' => $levell
             ];
             $session->set($datanya);

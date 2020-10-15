@@ -9,16 +9,18 @@
       <div class="card-body">
         <blockquote class="blockquote mb-0">
           <p>Selamat Datang : <?= session()->get('nama') ?></p>
-          <?php //$level = session()->get('tolol') 
+
+          <?php //echo $kasta = session()->get('kasta'); 
           ?>
-          <?php //foreach ($level as $i) : 
+          <?= $kasta = session()->get('kasta'); ?>
+
+          <?php //foreach ($kasta as $d) : 
           ?>
-          <!-- <p>Halo : <?//= $level[0]; ?></p> -->
+          <p>
+            <?//= $d; ?>
+          </p>
           <?php //endforeach; 
           ?>
-
-          <?php echo $kasta = session()->get('kasta')[1]; ?>
-          <!-- <p>Haloo : <?//= $kasta[0]; ?></p> -->
 
           <ul class="list-group list-group-flush my-3">
             <li class="list-group-item">bug : blom tambahin update di dosen</li>
