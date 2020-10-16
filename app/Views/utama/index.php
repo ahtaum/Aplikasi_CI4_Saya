@@ -10,14 +10,15 @@
         <blockquote class="blockquote mb-0">
           <p>Selamat Datang : <?= session()->get('nama') ?></p>
 
-          <?php //echo $kasta = session()->get('kasta'); 
-          ?>
-          <?= $kasta = session()->get('kasta'); ?>
 
-          <?php //foreach ($kasta as $d) : 
+          <?php foreach ($isilogin as $v) : ?>
+            <p><?= $v['nama_admin']; ?></p>
+          <?php endforeach; ?>
+
+          <?php //foreach ($kasta as $g) : 
           ?>
           <p>
-            <?//= $d; ?>
+            <?//= $kasta['dosen']; ?>
           </p>
           <?php //endforeach; 
           ?>

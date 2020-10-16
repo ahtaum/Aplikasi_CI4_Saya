@@ -139,7 +139,7 @@ class Login extends BaseController
             $datanya = [
                 'nama' => $nama,
                 'nim' => $password,
-                // 'kasta' => $level
+                'kasta' => $level
             ];
 
             $session->set($datanya);

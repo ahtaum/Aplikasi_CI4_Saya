@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class DosenModel extends Model
 {
     protected $table      = 'dosen';
-    protected $allowedFields = ['nama', 'nik', 'bidangkeahlian', 'jk', 'level'];
+    protected $allowedFields = ['nama', 'nik', 'bidangkeahlian', 'jk', 'level', 'penanda'];
     protected $useTimestamps = true;
 
     public function getDosenCek($id = false)

@@ -5,9 +5,11 @@ namespace App\Controllers;
 class Utama extends BaseController
 {
 
+  protected $login;
+
   // public function __construct()
   // {
-  //   helper('proteksiPkeSession');
+  //   //helper('proteksiPkeSession');
   // }
 
   public function index()

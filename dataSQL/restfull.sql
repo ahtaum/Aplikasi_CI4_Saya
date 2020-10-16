@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2020 at 12:42 PM
+-- Generation Time: Oct 16, 2020 at 09:17 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -32,6 +32,7 @@ CREATE TABLE `akademikti` (
   `nama` varchar(255) NOT NULL,
   `nik` int(9) NOT NULL,
   `jk` enum('laki-laki','perempuan') NOT NULL DEFAULT 'laki-laki',
+  `penanda` varchar(255) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -50,6 +51,7 @@ CREATE TABLE `dosen` (
   `bidangkeahlian` varchar(255) NOT NULL,
   `jk` enum('laki-laki','perempuan') NOT NULL DEFAULT 'laki-laki',
   `level` varchar(255) NOT NULL,
+  `penanda` varchar(255) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -58,11 +60,11 @@ CREATE TABLE `dosen` (
 -- Dumping data for table `dosen`
 --
 
-INSERT INTO `dosen` (`id`, `slug`, `nama`, `nik`, `bidangkeahlian`, `jk`, `level`, `created_at`, `updated_at`) VALUES
-(1, 'mark', 'Karl Marx', 111109898, 'Kirinisme', 'laki-laki', 'dosen', '2020-09-17 21:41:47', '2020-10-07 12:18:01'),
-(2, NULL, 'muhammad al khawarizmi', 11111111, 'Aljabar,Matematika', 'laki-laki', 'dosen', '2020-09-17 22:44:22', '2020-09-17 22:44:22'),
-(45, NULL, 'Aviram Lotha Yizrael', 11111110, 'Teknik Fisika', 'laki-laki', 'dosen', '2020-09-28 08:47:26', '2020-10-09 23:09:34'),
-(49, NULL, 'Flavius Heraclius Augustus', 989898989, 'Teknik Perang, Diplomasi, Geopolitik, ekonom', 'laki-laki', 'dosen', '2020-10-10 04:03:34', '2020-10-10 04:05:14');
+INSERT INTO `dosen` (`id`, `slug`, `nama`, `nik`, `bidangkeahlian`, `jk`, `level`, `penanda`, `created_at`, `updated_at`) VALUES
+(1, 'mark', 'Karl Marx', 111109898, 'Kirinisme', 'laki-laki', 'dosen', 'tandai', '2020-09-17 21:41:47', '2020-10-07 12:18:01'),
+(2, NULL, 'muhammad al khawarizmi', 11111111, 'Aljabar,Matematika', 'laki-laki', 'dosen', 'tandai', '2020-09-17 22:44:22', '2020-09-17 22:44:22'),
+(45, NULL, 'Aviram Lotha Yizrael', 11111110, 'Teknik Fisika', 'laki-laki', 'dosen', 'tandai', '2020-09-28 08:47:26', '2020-10-09 23:09:34'),
+(49, NULL, 'Flavius Heraclius Augustus', 989898989, 'Teknik Perang, Diplomasi, Geopolitik, ekonom', 'laki-laki', 'dosen', 'tandai', '2020-10-10 04:03:34', '2020-10-10 04:05:14');
 
 -- --------------------------------------------------------
 
@@ -75,6 +77,7 @@ CREATE TABLE `login` (
   `nama` varchar(255) NOT NULL,
   `nim` int(9) NOT NULL,
   `level` varchar(255) NOT NULL,
+  `penanda` varchar(255) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -83,9 +86,9 @@ CREATE TABLE `login` (
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`id`, `nama`, `nim`, `level`, `created_at`, `updated_at`) VALUES
-(1, 'judith', 175410093, 'admin', NULL, NULL),
-(2, 'adit', 666666666, 'admin', '2020-10-10 04:20:03', '2020-10-10 04:20:03');
+INSERT INTO `login` (`id`, `nama`, `nim`, `level`, `penanda`, `created_at`, `updated_at`) VALUES
+(1, 'judith', 175410093, 'admin', 'tandai', NULL, NULL),
+(2, 'adit', 666666666, 'admin', 'tandai', '2020-10-10 04:20:03', '2020-10-10 04:20:03');
 
 -- --------------------------------------------------------
 
@@ -101,6 +104,7 @@ CREATE TABLE `mahasiswa` (
   `ipk` double NOT NULL,
   `jk` enum('laki-laki','perempuan') NOT NULL DEFAULT 'laki-laki',
   `level` varchar(255) NOT NULL,
+  `penanda` varchar(255) NOT NULL,
   `komentar` varchar(255) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
@@ -110,11 +114,11 @@ CREATE TABLE `mahasiswa` (
 -- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`id`, `slug`, `nama`, `nim`, `ipk`, `jk`, `level`, `komentar`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'Uzumaki Sarutod', 1010001, 3, 'laki-laki', 'mahasiswa', '', '2020-09-18 06:33:31', '2020-10-10 03:50:53'),
-(2, NULL, 'Uzumaki Bayu', 1001, 4, 'laki-laki', 'mahasiswa', '', '2020-09-18 06:34:02', '2020-09-18 06:34:02'),
-(3, 'mark', 'Emilia', 10101014, 4, 'perempuan', 'mahasiswa', '', '2020-09-18 06:34:21', '2020-10-05 21:21:21'),
-(51, NULL, 'Hartono', 101110110, 9, 'laki-laki', 'mahasiswa', '', '2020-09-26 07:41:35', '2020-10-09 23:10:08');
+INSERT INTO `mahasiswa` (`id`, `slug`, `nama`, `nim`, `ipk`, `jk`, `level`, `penanda`, `komentar`, `created_at`, `updated_at`) VALUES
+(1, NULL, 'Uzumaki Sarutod', 1010001, 3, 'laki-laki', 'mahasiswa', 'tandai', '', '2020-09-18 06:33:31', '2020-10-10 03:50:53'),
+(2, NULL, 'Uzumaki Bayu', 1001, 4, 'laki-laki', 'mahasiswa', 'tandai', '', '2020-09-18 06:34:02', '2020-09-18 06:34:02'),
+(3, 'mark', 'Emilia', 10101014, 4, 'perempuan', 'mahasiswa', 'tandai', '', '2020-09-18 06:34:21', '2020-10-05 21:21:21'),
+(51, NULL, 'Hartono', 101110110, 9, 'laki-laki', 'mahasiswa', 'tandai', '', '2020-09-26 07:41:35', '2020-10-09 23:10:08');
 
 -- --------------------------------------------------------
 
