@@ -9,19 +9,8 @@
       <div class="card-body">
         <blockquote class="blockquote mb-0">
           <p>Selamat Datang : <?= session()->get('nama') ?></p>
-
-
-          <?php foreach ($isilogin as $v) : ?>
-            <p><?= $v['nama_admin']; ?></p>
-          <?php endforeach; ?>
-
-          <?php //foreach ($kasta as $g) : 
-          ?>
-          <p>
-            <?//= $kasta['dosen']; ?>
-          </p>
-          <?php //endforeach; 
-          ?>
+          <?php $level = session()->get('kasta') ?>
+          <?= $level; ?>
 
           <ul class="list-group list-group-flush my-3">
             <li class="list-group-item">bug : blom tambahin update di dosen</li>
