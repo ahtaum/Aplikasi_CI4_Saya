@@ -13,7 +13,7 @@
           <?php endif; ?>
           <h2 class="font-weight-light mb-3">Tambah data</h2>
           <h3>Anda adalah : <?= session()->get('nama') ?></h3>
-          <p>anda seorang : <?= session()->get('level') ?></p>
+          <p>anda seorang : <?= session()->get('kasta') ?></p>
           <a class="btn btn-light mb-4" data-toggle="modal" data-target="#tambah">Tambah</a>
           <h3 class="font-weight-light mb-3">Data Mahasiswa</h3>
           <div class="modal fade" id="tambah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -28,6 +28,7 @@
                 <div class="modal-footer">
                   <a href="/dataku/tambahMahasiswa" class="btn btn-light">Mahasiswa</a>
                   <a href="/dataku/tambahDosen" class="btn btn-light">Dosen</a>
+                  <a class="nav-link btn btn-light" href="/dataku/registrasiAdmin">Registrasi Admin</a>
                   <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
                 </div>
               </div>
