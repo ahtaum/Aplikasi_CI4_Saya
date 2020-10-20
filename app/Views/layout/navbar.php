@@ -6,13 +6,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
+        <a class="nav-link" href="/utama">Home</a>
         <?php $level = session()->get('kasta'); ?>
         <?php if ($level == 'admin') { ?>
           <a class="nav-link" href="/dataku">Data</a>
-          <!-- <a class="nav-link" href="/dataku/registrasiAdmin">Registrasi Admin</a> -->
+          <a class="nav-link" href="/dataku/registrasiAdmin">Registrasi Admin</a>
         <?php } ?>
         <a class="nav-link" href="/dataku/indexMahasiswa">Bimbingan</a>
-        <a class="nav-link" href="/utama">Home</a>
         <a class="nav-link" href="/login/Logout">Logout</a>
       </div>
     </div>

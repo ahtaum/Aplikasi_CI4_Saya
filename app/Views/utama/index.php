@@ -18,8 +18,9 @@
             <li class="list-group-item">bug : tidak bisa menampilkan level user</li>
             <li class="list-group-item">bug : blom ada fitur validasi di update dosen dan mahasiswa</li>
             <li class="list-group-item">bug : blom ada fitur validasi di Login</li>
+            <li class="list-group-item text-danger">bug Penting !!! : Masih ada bug karena Session, maka solusinya sesuaikan session nya pada tiap-tiap fitur dan halaman</li>
           </ul>
-          <footer class="blockquote-footer">Kemauwan adalah kunci<cite title="Source Title"> Judith Herlambang</cite></footer>
+          <footer class="blockquote-footer">bertekadlah untuk tidak mengharapkan apa yang dimiliki orang lain.<cite title="Source Title"> Muhammad SAW, di dalam kutipan hadis Imam Ahmad.</cite></footer>
         </blockquote>
       </div>
     </div>

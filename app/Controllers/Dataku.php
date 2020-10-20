@@ -22,7 +22,7 @@ class Dataku extends BaseController
 
     public function index()
     {
-        if (session()->get('nama') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('login/loginWeb');
         }
@@ -39,7 +39,7 @@ class Dataku extends BaseController
 
     public function indexMahasiswa()
     {
-        if (session()->get('nama') == '') {
+        if (session()->get('kasta') == '') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('login/loginWeb');
         }
@@ -54,7 +54,7 @@ class Dataku extends BaseController
 
     public function ubah($id)
     {
-        if (session()->get('nama') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('login/loginWeb');
         }
@@ -75,7 +75,7 @@ class Dataku extends BaseController
 
     public function detail($id)
     {
-        if (session()->get('nama') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('login/loginWeb');
         }
@@ -89,7 +89,7 @@ class Dataku extends BaseController
 
     public function detailDosen($id)
     {
-        if (session()->get('nama') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('login/loginWeb');
         }
@@ -103,7 +103,7 @@ class Dataku extends BaseController
 
     public function tambahMahasiswa()
     {
-        if (session()->get('nama') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('login/loginWeb');
         }
@@ -116,7 +116,7 @@ class Dataku extends BaseController
     }
     public function tambahDosen()
     {
-        if (session()->get('nama') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('login/loginWeb');
         }
@@ -140,6 +140,10 @@ class Dataku extends BaseController
 
     public function simpanRegistrasi()
     {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('login/loginWeb');
+        }
         $this->admin->save([
             'nama' => $this->request->getVar('nama'),
             'nim' => $this->request->getVar('nim'),
@@ -234,7 +238,7 @@ class Dataku extends BaseController
 
     public function hapus($id)
     {
-        if (session()->get('nama') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('login/loginWeb');
         }
@@ -254,6 +258,10 @@ class Dataku extends BaseController
 
     public function update($id)
     {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('login/loginWeb');
+        }
 
         $mahasiswaUbah = $this->request->getVar('mahasiswaubah');
         $dosenUbah = $this->request->getVar('dosenUbah');
