@@ -54,10 +54,14 @@ class Dataku extends BaseController
 
     public function ubah($id)
     {
-        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen' || session()->get('kasta') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
-            return redirect()->to('../');
+            return redirect()->to('../Utama');
+        } elseif (session()->get('kasta') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('../login/loginWeb');
         }
+
         $data = [
             'title' => 'Ubah Data',
             'datanya' => $this->dataMahasiswa->getMahasiswaCek($id),
@@ -75,10 +79,14 @@ class Dataku extends BaseController
 
     public function detail($id)
     {
-        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen' || session()->get('kasta') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
-            return redirect()->to('../');
+            return redirect()->to('../Utama');
+        } elseif (session()->get('kasta') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('../login/loginWeb');
         }
+
         $data = [
             'title' => 'Detail Mahasiswa',
             'tampildetail' => $this->dataMahasiswa->getMahasiswaCek($id)
@@ -89,10 +97,14 @@ class Dataku extends BaseController
 
     public function detailDosen($id)
     {
-        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen' || session()->get('kasta') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
-            return redirect()->to('../');
+            return redirect()->to('../Utama');
+        } elseif (session()->get('kasta') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('../login/loginWeb');
         }
+
         $data = [
             'title' => 'Detail Dosen',
             'tampildetaildosen' => $this->dataDosen->getDosenCek($id)
@@ -103,10 +115,14 @@ class Dataku extends BaseController
 
     public function tambahMahasiswa()
     {
-        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen' || session()->get('kasta') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
-            return redirect()->to('login/loginWeb');
+            return redirect()->to('../Utama');
+        } elseif (session()->get('kasta') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('../login/loginWeb');
         }
+
         $data = [
             'title' => 'Tambah Data Mahasiswa',
             'validasi' => \Config\Services::validation()
@@ -116,10 +132,14 @@ class Dataku extends BaseController
     }
     public function tambahDosen()
     {
-        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen' || session()->get('kasta') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
-            return redirect()->to('login/loginWeb');
+            return redirect()->to('../Utama');
+        } elseif (session()->get('kasta') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('../login/loginWeb');
         }
+
         $data = [
             'title' => 'Tambah Data Dosen',
             'validasidua' => \Config\Services::validation()
@@ -131,10 +151,14 @@ class Dataku extends BaseController
     // Registrasi Admin
     public function registrasiAdmin()
     {
-        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen' || session()->get('kasta') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('../Utama');
+        } elseif (session()->get('kasta') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('../login/loginWeb');
         }
+
         $data = [
             'title' => 'Registrasi Admin'
         ];
@@ -242,9 +266,12 @@ class Dataku extends BaseController
 
     public function hapus($id)
     {
-        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen' || session()->get('kasta') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
-            return redirect()->to('../');
+            return redirect()->to('../Utama');
+        } elseif (session()->get('kasta') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('../login/loginWeb');
         }
 
         $hapusLurr = $this->request->getVar('mahasiswahapus');
@@ -262,9 +289,12 @@ class Dataku extends BaseController
 
     public function update($id)
     {
-        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen' || session()->get('kasta') == '') {
+        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
-            return redirect()->to('../');
+            return redirect()->to('../Utama');
+        } elseif (session()->get('kasta') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('../login/loginWeb');
         }
 
         $mahasiswaUbah = $this->request->getVar('mahasiswaubah');
