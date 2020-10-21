@@ -13,11 +13,9 @@
           <?= $level; ?>
 
           <ul class="list-group list-group-flush my-3">
-            <li class="list-group-item">bug : blom tambahin update di dosen</li>
-            <li class="list-group-item">belom ada Pembatasan session untuk akun mahasiswa dan dosen permasalahanya session 'level' tidak tertangkap</li>
-            <li class="list-group-item">bug : tidak bisa menampilkan level user</li>
             <li class="list-group-item">bug : blom ada fitur validasi di update dosen dan mahasiswa</li>
             <li class="list-group-item">bug : blom ada fitur validasi di Login</li>
+            <li class="list-group-item">bug : blom ada penanganan exception</li>
             <li class="list-group-item text-danger">bug Penting !!! : Masih ada bug karena Session, maka solusinya sesuaikan session nya pada tiap-tiap fitur dan halaman</li>
           </ul>
           <footer class="blockquote-footer">bertekadlah untuk tidak mengharapkan apa yang dimiliki orang lain.<cite title="Source Title"> Muhammad SAW, di dalam kutipan hadis Imam Ahmad.</cite></footer>

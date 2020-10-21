@@ -14,7 +14,7 @@ class Utama extends BaseController
 
   public function index()
   {
-    if (session()->get('nama') == '') {
+    if (session()->get('kasta') == '') {
       session()->setFlashdata('gagal', 'Anda Harus Login !!!');
       return redirect()->to('login/loginWeb');
     }

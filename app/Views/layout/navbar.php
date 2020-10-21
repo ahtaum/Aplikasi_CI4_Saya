@@ -10,7 +10,6 @@
         <?php $level = session()->get('kasta'); ?>
         <?php if ($level == 'admin') { ?>
           <a class="nav-link" href="/dataku">Data</a>
-          <a class="nav-link" href="/dataku/registrasiAdmin">Registrasi Admin</a>
         <?php } ?>
         <a class="nav-link" href="/dataku/indexMahasiswa">Bimbingan</a>
         <a class="nav-link" href="/login/Logout">Logout</a>
