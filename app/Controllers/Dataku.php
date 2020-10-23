@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\DosenModel;
 use App\Models\MahasiswaModel;
 use App\Models\LoginModel;
+use Exception;
 
 class Dataku extends BaseController
 {
@@ -160,7 +161,8 @@ class Dataku extends BaseController
         }
 
         $data = [
-            'title' => 'Registrasi Admin'
+            'title' => 'Registrasi Admin',
+            'validasiRegistrasi' => \Config\Services::validation()
         ];
 
         return view('data/registrasi', $data);
@@ -172,11 +174,42 @@ class Dataku extends BaseController
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('login/loginWeb');
         }
+        // $this->admin->save([
+        //     'nama' => $this->request->getVar('nama'),
+        //     'nim' => $this->request->getVar('nim'),
+        //     'level' => $this->request->getVar('adm')
+        // ]);
+
+        $admin = $this->request->getVar('admin');
+        if (isset($admin)) {
+            if (!$this->validate([
+                'nama' => [
+                    'rules' => 'required|is_unique[login.nama]',
+                    'errors' => [
+                        'required' => '{field} harus di isi',
+                        'is_unique' => '{field} sudah ada'
+                    ]
+                ],
+                'nim' => [
+                    'rules' => 'required|min_length[9]|max_length[9]|is_unique[login.nim]',
+                    'errors' => [
+                        'required' => '{field} harus di isi',
+                        'min_length' => 'karakter harus 9 digit',
+                        'max_length' => 'karakter harus 9 digit',
+                        'is_unique' => '{field} sudah ada'
+                    ]
+                ]
+            ])) {
+                return redirect()->to('/dataku/registrasiAdmin')->withInput();
+            }
+        }
+
         $this->admin->save([
             'nama' => $this->request->getVar('nama'),
             'nim' => $this->request->getVar('nim'),
             'level' => $this->request->getVar('adm')
         ]);
+        return redirect()->to('/dataku');
     }
 
     public function simpan()
@@ -301,6 +334,7 @@ class Dataku extends BaseController
         $dosenUbah = $this->request->getVar('dosenUbah');
 
         if (isset($mahasiswaUbah) == true) {
+
             // update mahasiswa
             $this->dataMahasiswa->save([
                 'id' => $id,
@@ -309,10 +343,11 @@ class Dataku extends BaseController
                 'ipk' => $this->request->getVar('ipk'),
                 'jk' => $this->request->getVar('jk')
             ]);
+
             session()->setFlashdata('pesan', 'Data berhasil di ubah.');
-            // klo dah simpen data kembali ke halaman /buku/index
             return redirect()->to('/dataku');
         } else {
+
             // update dosen
             $this->dataDosen->save([
                 'id' => $id,

@@ -16,18 +16,18 @@
                         <div class="form-group row">
                             <label for="nama" class="col-sm-2 col-form-label">nama</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control <?//= ($validasi->hasError('nama')) ? 'is-invalid' : ''; ?>" id="nama" name="nama" value="<?= old('nama'); ?>">
+                                <input type="text" class="form-control <?= ($validasiRegistrasi->hasError('nama')) ? 'is-invalid' : ''; ?>" id="nama" name="nama" value="<?= old('nama'); ?>">
                                 <div class="invalid-feedback">
-                                    <?//= $validasi->getError('nama'); ?>
+                                    <?= $validasiRegistrasi->getError('nama'); ?>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="nim" class="col-sm-2 col-form-label">Nim</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control <?//= ($validasi->hasError('nim')) ? 'is-invalid' : ''; ?>" id="nim" name="nim" value="<?//= old('nim'); ?>">
+                                <input type="number" class="form-control <?= ($validasiRegistrasi->hasError('nim')) ? 'is-invalid' : ''; ?>" id="nim" name="nim" value="<?= old('nim'); ?>">
                                 <div class="invalid-feedback">
-                                    <?//= $validasi->getError('nim'); ?>
+                                    <?= $validasiRegistrasi->getError('nim'); ?>
                                 </div>
                             </div>
                         </div>

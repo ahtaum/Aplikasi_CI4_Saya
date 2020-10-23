@@ -11,10 +11,13 @@
               <?= session()->getFlashdata('pesan'); ?>
             </div>
           <?php endif; ?>
+
           <h2 class="font-weight-light mb-3">Tambah data</h2>
           <h3>Anda adalah : <?= session()->get('nama') ?></h3>
           <p>anda seorang : <?= session()->get('kasta') ?></p>
+
           <a class="btn btn-light mb-4" data-toggle="modal" data-target="#tambah">Tambah</a>
+
           <h3 class="font-weight-light mb-3">Data Mahasiswa</h3>
           <div class="modal fade" id="tambah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -34,6 +37,7 @@
               </div>
             </div>
           </div>
+
           <table class="table table-dark">
             <thead>
               <tr>
@@ -70,7 +74,6 @@
               <?php endforeach; ?>
           </table>
           <h3 class="font-weight-light my-3">Data Dosen</h3>
-          <p>bug : blom tambahin update di dosen</p>
           <table class="table table-dark">
             <thead>
               <tr>

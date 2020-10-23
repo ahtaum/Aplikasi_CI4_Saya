@@ -18,4 +18,10 @@ class LoginModel extends Model
             dosen.nama as nama_dosen,dosen.nik,dosen.level')->join('mahasiswa', 'login.penanda = mahasiswa.penanda')
             ->join('dosen', 'dosen.penanda = mahasiswa.penanda')->get()->getResultArray();
     }
+
+    // public function hapusAkunnya($nama)
+    // {
+    //     if ($nama == true) {
+    //     }
+    // }
 }
