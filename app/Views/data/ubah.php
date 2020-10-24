@@ -33,6 +33,14 @@
                                 <option>perempuan</option>
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label for="col-sm-2 col-form-label">Dosen Pembimbing</label>
+                            <select class="form-control" id="pilih" name="pilih" value="<?php $dataqu; ?>">
+                                <?php foreach ($dataslug as $t) : ?>
+                                    <option><?= $t['nama']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
                         <div class="form-group row">
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-primary" name="mahasiswaubah">Ubah</button>

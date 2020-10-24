@@ -66,7 +66,9 @@ class Dataku extends BaseController
         $data = [
             'title' => 'Ubah Data',
             'datanya' => $this->dataMahasiswa->getMahasiswaCek($id),
-            'datanyaDosen' => $this->dataDosen->getDosenCek($id)
+            'datanyaDosen' => $this->dataDosen->getDosenCek($id),
+            'dataqu' => $this->dataDosen->findColumn('slug'),
+            'dataslug' => $this->dataDosen->findAll()
         ];
 
         $dosenUbahHalaman = $this->request->getVar('ubahDosen');
@@ -335,13 +337,16 @@ class Dataku extends BaseController
 
         if (isset($mahasiswaUbah) == true) {
 
+            $slug = url_title($this->request->getVar('pilih'), '-', true);
+
             // update mahasiswa
             $this->dataMahasiswa->save([
                 'id' => $id,
                 'nama' => $this->request->getVar('nama'),
                 'nim' => $this->request->getVar('nim'),
                 'ipk' => $this->request->getVar('ipk'),
-                'jk' => $this->request->getVar('jk')
+                'jk' => $this->request->getVar('jk'),
+                'slug' => $slug
             ]);
 
             session()->setFlashdata('pesan', 'Data berhasil di ubah.');
@@ -361,4 +366,21 @@ class Dataku extends BaseController
             return redirect()->to('/dataku');
         }
     }
+
+    // public function simpanBimbingan($id)
+    // {
+    //     //$slug = url_title($this->request->getVar('judul'), '-', true);
+    //     $slug = url_title($this->request->getVar('pilihmahasiswa'), '-', true);
+    //     $slugdua = url_title($this->request->getVar('pilihdosen'), '-', true);
+    //     $mhsnya = $this->request->getVar('pilihmahasiswa');
+    //     if (isset($mhsnya) == true) {
+    //         $this->dataMahasiswa->save([
+    //             'slug' => $slug
+    //         ]);
+    //     } else {
+    //         $this->dataDosen->save([
+    //             'slug' => $slugdua
+    //         ]);
+    //     }
+    // }
 }

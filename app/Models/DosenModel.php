@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class DosenModel extends Model
 {
     protected $table      = 'dosen';
-    protected $allowedFields = ['nama', 'nik', 'bidangkeahlian', 'jk', 'level', 'penanda'];
+    protected $allowedFields = ['nama', 'nik', 'bidangkeahlian', 'jk', 'level', 'penanda', 'slug'];
     protected $useTimestamps = true;
 
     public function getDosenCek($id = false)
@@ -27,4 +27,9 @@ class DosenModel extends Model
     {
         return $this->db->table('dosen')->select('level')->where(['nama', $nama])->get()->getResultArray();
     }
+
+    // public function cariDsn($id)
+    // {
+    //     return $this->where(['id' => $id])->first();
+    // }
 }
