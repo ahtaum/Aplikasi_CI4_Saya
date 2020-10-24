@@ -292,7 +292,8 @@ class Dataku extends BaseController
                 'nik' => $this->request->getVar('nik'),
                 'bidangkeahlian' => $this->request->getVar('bidangkeahlian'),
                 'jk' => $this->request->getVar('jk'),
-                'level' => $this->request->getVar('dsn')
+                'level' => $this->request->getVar('dsn'),
+                'slug' => url_title($this->request->getVar('nama'), '-', true)
             ]);
         }
 
@@ -366,21 +367,4 @@ class Dataku extends BaseController
             return redirect()->to('/dataku');
         }
     }
-
-    // public function simpanBimbingan($id)
-    // {
-    //     //$slug = url_title($this->request->getVar('judul'), '-', true);
-    //     $slug = url_title($this->request->getVar('pilihmahasiswa'), '-', true);
-    //     $slugdua = url_title($this->request->getVar('pilihdosen'), '-', true);
-    //     $mhsnya = $this->request->getVar('pilihmahasiswa');
-    //     if (isset($mhsnya) == true) {
-    //         $this->dataMahasiswa->save([
-    //             'slug' => $slug
-    //         ]);
-    //     } else {
-    //         $this->dataDosen->save([
-    //             'slug' => $slugdua
-    //         ]);
-    //     }
-    // }
 }
