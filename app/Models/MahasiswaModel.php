@@ -19,6 +19,15 @@ class MahasiswaModel extends Model
         return $this->where(['id' => $id])->first();
     }
 
+    public function gabungTabelSpesifik($nama)
+    {
+        return $this->db->table('dosen')->select('mahasiswa.nama as mhs,dosen.nama,mahasiswa.nim,dosen.nik,mahasiswa.ipk')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->where(['mahasiswa.nama' => $nama])->get()->getResultArray();
+    }
+
+    // kunci
+    // select mhs.nama as nama_mahasiswa,dsn.nama as nama_dosen
+    // -> from mahasiswa mhs join dosen dsn on mhs.slug = dsn.slug where mhs.nama = 'Hartono';
+
     // public function cariMhs($nama)
     // {
     //     return $this->where(['nama' => $nama])->first();

@@ -34,7 +34,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="col-sm-2 col-form-label">Dosen Pembimbing</label>
+                            <label for="col-sm-2 col-form-label">Pilih Dosen Pembimbing</label>
                             <select class="form-control" id="pilih" name="pilih" value="<?php $dataqu; ?>">
                                 <?php foreach ($dataslug as $t) : ?>
                                     <option><?= $t['nama']; ?></option>

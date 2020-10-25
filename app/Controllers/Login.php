@@ -87,7 +87,8 @@ class Login extends BaseController
             $data = [
                 'nama' => $nama,
                 'nim' => $password,
-                'kasta' => $level['mahasiswa']
+                'kasta' => $level['mahasiswa'],
+                'datad' => $this->mahasiswa->gabungTabelSpesifik($nama)
             ];
             $session->set($data);
             return $this->response->redirect('/utama');
