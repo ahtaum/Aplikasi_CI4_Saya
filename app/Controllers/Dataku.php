@@ -53,6 +53,22 @@ class Dataku extends BaseController
         return view('data/indexmhs', $data);
     }
 
+    public function pengajuan($id)
+    {
+        if (session()->get('kasta') == '') {
+            session()->setFlashdata('gagal', 'Anda Harus Login !!!');
+            return redirect()->to('login/loginWeb');
+        }
+
+        $data = [
+            'title' => 'Pengajuan',
+            'dataCek' => $this->dataMahasiswa->getMahasiswaCek($id),
+            'dataMhs' => $this->dataMahasiswa->findColumn('judul')
+        ];
+
+        return view('data/halamanPengajuan', $data);
+    }
+
     public function ubah($id)
     {
         if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
@@ -176,11 +192,6 @@ class Dataku extends BaseController
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('login/loginWeb');
         }
-        // $this->admin->save([
-        //     'nama' => $this->request->getVar('nama'),
-        //     'nim' => $this->request->getVar('nim'),
-        //     'level' => $this->request->getVar('adm')
-        // ]);
 
         $admin = $this->request->getVar('admin');
         if (isset($admin)) {
@@ -325,7 +336,7 @@ class Dataku extends BaseController
 
     public function update($id)
     {
-        if (session()->get('kasta') == 'mahasiswa' || session()->get('kasta') == 'dosen') {
+        if (session()->get('kasta') == 'dosen' || session()->get('kasta') == '') {
             session()->setFlashdata('gagal', 'Anda Harus Login !!!');
             return redirect()->to('../Utama');
         } elseif (session()->get('kasta') == '') {
@@ -335,6 +346,7 @@ class Dataku extends BaseController
 
         $mahasiswaUbah = $this->request->getVar('mahasiswaubah');
         $dosenUbah = $this->request->getVar('dosenUbah');
+        $tambahjudul = $this->request->getVar('ajukan');
 
         if (isset($mahasiswaUbah) == true) {
 
@@ -347,11 +359,20 @@ class Dataku extends BaseController
                 'nim' => $this->request->getVar('nim'),
                 'ipk' => $this->request->getVar('ipk'),
                 'jk' => $this->request->getVar('jk'),
-                'slug' => $slug
+                'slug' => $slug,
             ]);
 
             session()->setFlashdata('pesan', 'Data berhasil di ubah.');
             return redirect()->to('/dataku');
+        } elseif (isset($tambahjudul) == true) {
+
+            $data = [
+                'judul' => $this->request->getVar('judul')
+            ];
+
+            $this->dataMahasiswa->update($id, $data);
+            session()->setFlashdata('pesanJudul', 'Data berhasil di ubah.');
+            return redirect()->to('/dataku/indexMahasiswa');
         } else {
 
             // update dosen

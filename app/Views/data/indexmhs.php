@@ -6,8 +6,14 @@
         <div class="col">
             <h3 class="font-weight-light my-3">Data Bimbingan</h3>
             <table class="table table-dark">
+                <?php if (session()->getFlashdata('pesanJudul')) : ?>
+                    <div class="alert alert-success" role="alert">
+                        <?= session()->getFlashdata('pesanJudul'); ?>
+                    </div>
+                <?php endif; ?>
                 <thead>
                     <tr>
+                        <th scope="col">id</th>
                         <th scope="col">Nama Mahasiswa</th>
                         <th scope="col">Nama Dosen</th>
                         <th scope="col">Nim</th>
@@ -21,6 +27,7 @@
                         <?php $datad = session()->get('datad') ?>
                         <?php foreach ($datad as $d) : ?>
                             <tr>
+                                <th><?= $d['idmhs']; ?></th>
                                 <th><?= $d['mhs']; ?></th>
                                 <th><?= $d['nama']; ?></th>
                                 <th><?= $d['nim']; ?></th>
@@ -57,24 +64,24 @@
 
     <?php if ($level == 'mahasiswa') { ?>
         <div class="row">
-            <div class="col-sm-8">
-                <div class="card">
+            <div class="col-sm-10">
+                <div class="card" id="identitasMhs">
+                    <div class="card-header text-center">Identitas</div>
                     <div class="card-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Ajukan Judul</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                        <div class="card-text" style="padding: 10px;">Nilai Seminar Proposal : </div>
+                        <div class="card-text" style="padding: 10px;">Nilai Seminar Pra Skripsi : </div>
+                        <div class="card-text" style="padding: 10px;">Nilai Seminar Skripsi : </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-2">
                 <div class="card text-center">
                     <div class="card-header">Status</div>
                     <div class="card-body">
-                        <div class="card-text">ad</div>
+                        <div class="card-text">adaadasda</div>
+                        <?php foreach ($datad as $j) : ?>
+                            <a href="/dataku/pengajuan/<?= $j['idmhs']; ?>" class="btn btn-primary card-link mt-3">Ajukan</a>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>

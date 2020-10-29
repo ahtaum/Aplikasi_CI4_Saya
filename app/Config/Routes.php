@@ -35,6 +35,7 @@ $routes->setAutoRoute(true);
 // $routes->get('/', 'Utama::index');
 $routes->get('/', 'Login::loginWeb');
 $routes->get('/dataku/ubah/(:num)', 'Dataku::ubah/$1');
+$routes->get('/dataku/pengajuan/(:num)', 'Dataku::pengajuan/$1');
 $routes->get('/dataku/(:num)', 'Dataku::detail/$1');
 $routes->get('/dataku/(:num)', 'Dataku::detailDosen/$1');
 $routes->delete('/dataku/(:num)', 'Dataku::hapus/$1');

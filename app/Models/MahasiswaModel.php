@@ -8,7 +8,7 @@ use Exception;
 class MahasiswaModel extends Model
 {
     protected $table      = 'mahasiswa';
-    protected $allowedFields = ['nama', 'nim', 'ipk', 'jk', 'level', 'komentar', 'penanda', 'slug'];
+    protected $allowedFields = ['nama', 'nim', 'ipk', 'jk', 'level', 'komentar', 'penanda', 'slug', 'judul'];
     protected $useTimestamps = true;
 
     public function getMahasiswaCek($id = false)
@@ -21,7 +21,7 @@ class MahasiswaModel extends Model
 
     public function gabungTabelSpesifik($nama)
     {
-        return $this->db->table('dosen')->select('mahasiswa.nama as mhs,dosen.nama,mahasiswa.nim,dosen.nik,mahasiswa.ipk')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->where(['mahasiswa.nama' => $nama])->get()->getResultArray();
+        return $this->db->table('dosen')->select('mahasiswa.id as idmhs,dosen.id as iddsn,mahasiswa.nama as mhs,dosen.nama,mahasiswa.nim,dosen.nik,mahasiswa.ipk')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->where(['mahasiswa.nama' => $nama])->get()->getResultArray();
     }
 
     // kunci
