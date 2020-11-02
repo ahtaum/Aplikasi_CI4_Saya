@@ -67,6 +67,7 @@ class Login extends BaseController
     {
         $nama = $this->request->getVar('nama');
         $password = $this->request->getVar('nim');
+
         $level = [
             'admin' => $this->login->findColumn('level')[0],
             'mahasiswa' => $this->mahasiswa->findColumn('level')[0],
@@ -94,10 +95,12 @@ class Login extends BaseController
             return $this->response->redirect('/utama');
         elseif ($this->cekDosen($nama, $password, $level) != null) :
             $session = session();
+            $slug = url_title($nama, '-', true);
             $data = [
                 'nama' => $nama,
                 'nik' => $password,
-                'kasta' => $level['dosen']
+                'kasta' => $level['dosen'],
+                'slug' => $this->dosen->gabungTabelSpesifik($slug)
             ];
             $session->set($data);
             return $this->response->redirect('/utama');

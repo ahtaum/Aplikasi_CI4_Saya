@@ -28,6 +28,11 @@ class DosenModel extends Model
         return $this->db->table('dosen')->select('level')->where(['nama', $nama])->get()->getResultArray();
     }
 
+    public function gabungTabelSpesifik($slug)
+    {
+        return $this->db->table('dosen')->select('mahasiswa.id as idmhs,mahasiswa.nama as mhs,mahasiswa.nim,mahasiswa.judul')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->where(['dosen.slug' => $slug])->get()->getResultArray();
+    }
+
     // public function cariDsn($id)
     // {
     //     return $this->where(['id' => $id])->first();

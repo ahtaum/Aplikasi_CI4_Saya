@@ -4,36 +4,26 @@
 <div class="container">
     <div class="row">
         <div class="col">
-
             <h3 class="font-weight-light my-3">Data Bimbingan</h3>
-
-            <?php $level = [
-                'mahasiswa' => session()->get('kasta'),
-                'admin' => session()->get('kasta'),
-                'dosen' => session()->get('kasta')
-            ]; ?>
-
-            <?php if ($level['mahasiswa'] == 'mahasiswa') { ?>
-
-                <table class="table table-dark">
-                    <?php if (session()->getFlashdata('pesanJudul')) : ?>
-                        <div class="alert alert-success" role="alert">
-                            <?= session()->getFlashdata('pesanJudul'); ?>
-                        </div>
-                    <?php endif; ?>
-
-                    <thead>
-                        <tr>
-                            <th scope="col">id</th>
-                            <th scope="col">Nama Mahasiswa</th>
-                            <th scope="col">Nama Dosen</th>
-                            <th scope="col">Nim</th>
-                            <th scope="col">Nik</th>
-                            <th scope="col">IPK</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
+            <table class="table table-dark">
+                <?php if (session()->getFlashdata('pesanJudul')) : ?>
+                    <div class="alert alert-success" role="alert">
+                        <?= session()->getFlashdata('pesanJudul'); ?>
+                    </div>
+                <?php endif; ?>
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Nama Mahasiswa</th>
+                        <th scope="col">Nama Dosen</th>
+                        <th scope="col">Nim</th>
+                        <th scope="col">Nik</th>
+                        <th scope="col">IPK</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php $level = session()->get('kasta') ?>
+                    <?php if ($level == 'mahasiswa') { ?>
                         <?php $datad = session()->get('datad') ?>
                         <?php foreach ($datad as $d) : ?>
                             <tr>
@@ -45,27 +35,7 @@
                                 <th><?= $d['ipk']; ?></th>
                             </tr>
                         <?php endforeach; ?>
-                    </tbody>
-                </table>
-
-            <?php } elseif ($level['admin'] == 'admin') { ?>
-
-                <table class="table table-dark">
-                    <?php if (session()->getFlashdata('pesanJudul')) : ?>
-                        <div class="alert alert-success" role="alert">
-                            <?= session()->getFlashdata('pesanJudul'); ?>
-                        </div>
-                    <?php endif; ?>
-                    <thead>
-                        <tr>
-                            <th scope="col">id</th>
-                            <th scope="col">Nama Mahasiswa</th>
-                            <th scope="col">Nama Dosen</th>
-                            <th scope="col">Nim</th>
-                            <th scope="col">Nik</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                    <?php } else { ?>
                         <?php foreach ($bimbinganMhs as $v) : ?>
                             <tr>
                                 <th>
@@ -85,11 +55,12 @@
                                 </th>
                             </tr>
                         <?php endforeach; ?>
-                    </tbody>
-                </table>
+                    <?php } ?>
+                </tbody>
+            </table>
 
-            <?php } else { ?>
-
+            <?php $levelku = session()->get('kasta') ?>
+            <?php if ($levelku == 'dosen') { ?>
                 <table class="table table-dark">
                     <?php if (session()->getFlashdata('pesanJudul')) : ?>
                         <div class="alert alert-success" role="alert">
@@ -116,11 +87,11 @@
                         <?php endforeach ?>
                     </tbody>
                 </table>
-
             <?php } ?>
 
         </div>
     </div>
+
 
     <?php if ($level == 'mahasiswa') { ?>
         <div class="row">

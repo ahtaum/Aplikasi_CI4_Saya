@@ -20,8 +20,9 @@
                             <small id="nama" class="form-text text-muted">masukan nama Mahasiswa atau Dosen</small>
                         </div>
                         <div class="form-group">
-                            <label for="nim">Nim</label>
+                            <label for="nim">Password</label>
                             <input type="password" class="form-control" id="nim" name="nim" placeholder="nim" required>
+                            <small id="nama" class="form-text text-muted">masukan nim / nik untuk Mahasiswa atau Dosen</small>
                         </div>
                         <button type="submit" class="btn btn-primary" name="login">Submit</button>
                     </form>
