@@ -369,8 +369,7 @@ class Dataku extends BaseController
             $file = $this->request->getFile('file');
             $namaFile = $file->getClientName();
             $file->getClientMimeType();
-            // $file->move(WRITEPATH . 'uploads/penyimpananFile/' . $namaFile);
-            $file->move('../../penyimpananFile/' . $namaFile);
+            $file->move(WRITEPATH . 'uploads/penyimpananFile/' . $namaFile);
 
             $data = [
                 'judul' => $this->request->getVar('judul'),
