@@ -368,7 +368,7 @@ class Dataku extends BaseController
 
             $data = [
                 'judul' => $this->request->getVar('judul'),
-                'file' => $this->request->getFile('file')->store()
+                'file' => $this->request->getFile('file')->store('penyimpanan/', 'filedoank')
             ];
 
             $this->dataMahasiswa->update($id, $data);

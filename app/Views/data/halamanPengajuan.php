@@ -10,16 +10,17 @@
                     <form action="/dataku/update/<?= $dataCek['id']; ?>" method="POST" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
                         <div class="form-group row">
-                            <label for="judul" class="col-sm-2 col-form-label">Judul</label>
+                            <label for="judul" class="font-weight-light col-sm-2 col-form-label">Judul</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control mt-2" id="judul" name="judul">
+                                <input type="text" class="form-control mt-2" id="judul" name="judul" value="<?= $dataCek['judul']; ?>" required>
                             </div>
                         </div>
+                        <h5 class="font-weight-light">File</h5>
                         <div class="form-group row">
-                            <div class="custom-file my-3 p-1">
+                            <div class="custom-file my-1 p-1">
                                 <div class="col">
-                                    <label class="custom-file-label" for="fileskripsi">Choose file</label>
-                                    <input type="file" class="custom-file-input" id="fileskripsi" name="file">
+                                    <label class="custom-file-label" for="fileskripsi"><?= $dataCek['file']; ?></label>
+                                    <input type="file" class="custom-file-input" id="fileskripsi" name="file" required>
                                 </div>
                             </div>
                         </div>
