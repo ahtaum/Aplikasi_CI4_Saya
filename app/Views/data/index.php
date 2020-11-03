@@ -61,7 +61,6 @@
                   <td><?= $x['nim']; ?></td>
                   <td><?= $x['ipk']; ?></td>
                   <td><?= $x['jk']; ?></td>
-                  <td><?= $x['komentar']; ?></td>
                   <td><?= $x['created_at']; ?></td>
                   <td><?= $x['updated_at']; ?></td>
                   <form action="/dataku/hapus/<?= $x['id']; ?>" method="post" class="d-inline">

@@ -19,7 +19,7 @@
                             <div class="custom-file my-3 p-1">
                                 <div class="col">
                                     <label class="custom-file-label" for="fileskripsi">Choose file</label>
-                                    <input type="file" class="custom-file-input" id="fileskripsi">
+                                    <input type="file" class="custom-file-input" id="fileskripsi" name="file">
                                 </div>
                             </div>
                         </div>

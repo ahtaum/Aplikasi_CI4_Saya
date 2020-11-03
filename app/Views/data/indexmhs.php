@@ -122,7 +122,7 @@
         </div>
     </div>
 
-    <?php if ($level == 'mahasiswa') { ?>
+    <?php if ($level['mahasiswa'] == 'mahasiswa') { ?>
         <div class="row">
             <div class="col-sm-10">
                 <div class="card" id="identitasMhs">
