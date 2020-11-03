@@ -81,3 +81,23 @@ CRITICAL - 2020-11-03 01:16:04 --> The original file is not a valid file.
 #6 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #7 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
 #8 {main}
+CRITICAL - 2020-11-03 08:03:40 --> Could not move file phpD245.tmp to C:\xampp\htdocs\Aplikasi_CI4_Saya\writable\uploads/penyimpanan/ ()
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(187): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('phpD245.tmp', 'C:\\xampp\\htdocs...', '')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(409): CodeIgniter\HTTP\Files\UploadedFile->move('C:\\xampp\\htdocs...', 'C:\\xampp\\tmp\\ph...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(372): CodeIgniter\HTTP\Files\UploadedFile->store('penyimpanan/', 'C:\\xampp\\tmp\\ph...')
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->update('87')
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2020-11-03 08:05:28 --> Could not move file php7A0B.tmp to C:\xampp\htdocs\Aplikasi_CI4_Saya\writable\uploads//penyimpanan/ ()
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(187): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('php7A0B.tmp', 'C:\\xampp\\htdocs...', '')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(409): CodeIgniter\HTTP\Files\UploadedFile->move('C:\\xampp\\htdocs...', 'application/vnd...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(372): CodeIgniter\HTTP\Files\UploadedFile->store('/penyimpanan/', 'application/vnd...')
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->update('87')
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
