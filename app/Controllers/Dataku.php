@@ -367,14 +367,13 @@ class Dataku extends BaseController
         } elseif (isset($tambahjudul) == true) {
 
             $file = $this->request->getFile('file');
-            $namaFile = $file->getClientName();
-            $file->getClientMimeType();
-            $file->move(WRITEPATH . 'uploads/penyimpananFile/' . $namaFile);
+            $namaFile = $file->getRandomName();
+            $file->getMimeType();
+            $file->store('../../public/penyimpananFiles', $namaFile);
 
             $data = [
                 'judul' => $this->request->getVar('judul'),
                 'file' => $file
-                // 'file' => $this->request->getFile('file')->store('penyimpanan/', 'filedoank')
             ];
 
             $this->dataMahasiswa->update($id, $data);

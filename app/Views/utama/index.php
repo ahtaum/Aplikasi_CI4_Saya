@@ -18,6 +18,11 @@
             <li class="list-group-item">bug : blom ada penanganan exception</li>
             <li class="list-group-item">bug : 2 user yang sama bisa login dalam satu waktu</li>
             <li class="list-group-item text-danger">bug Penting !!! : Masih ada bug karena Session, maka solusinya sesuaikan session nya pada tiap-tiap fitur dan halaman</li>
+            <li class="list-group-item text-danger">bug : belum bisa menampilkan file ke web atau ke user</li>
+          </ul>
+          <p>Penting untuk saya : </p>
+          <ul>
+            <li class="list-group-item">Validation <span style="color: red;">' ext_in '</span> untuk validasi file yang bukan image, contoh pakai : <span style="color: red;">' ext_in[nama_field,doc,docx] '</span></li>
           </ul>
           <footer class="blockquote-footer">bertekadlah untuk tidak mengharapkan apa yang dimiliki orang lain.<cite title="Source Title"> Muhammad SAW, di dalam kutipan hadis Imam Ahmad.</cite></footer>
         </blockquote>
