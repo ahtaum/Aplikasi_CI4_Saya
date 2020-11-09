@@ -1,0 +1,77 @@
+CRITICAL - 2020-11-06 05:58:04 --> Undefined index: status
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Views\data\indexmhs.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/indexmhs', Array, true)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(53): view('data/indexmhs', Array)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->indexMahasiswa()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-11-06 05:59:07 --> Undefined index: status
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Views\data\indexmhs.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/indexmhs', Array, true)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(53): view('data/indexmhs', Array)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->indexMahasiswa()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-11-06 05:59:22 --> Undefined index: status
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Views\data\indexmhs.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/indexmhs', Array, true)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(53): view('data/indexmhs', Array)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->indexMahasiswa()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-11-06 06:00:03 --> Undefined index: status
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Views\data\indexmhs.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/indexmhs', Array, true)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(53): view('data/indexmhs', Array)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->indexMahasiswa()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-11-06 06:01:27 --> Undefined index: status
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Views\data\indexmhs.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/indexmhs', Array, true)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(53): view('data/indexmhs', Array)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->indexMahasiswa()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-11-06 06:18:39 --> Undefined index: status
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Views\data\indexmhs.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/indexmhs', Array, true)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(53): view('data/indexmhs', Array)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->indexMahasiswa()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-11-06 06:20:36 --> Undefined index: status
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Views\data\indexmhs.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('data/indexmhs', Array, true)
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(53): view('data/indexmhs', Array)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->indexMahasiswa()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}

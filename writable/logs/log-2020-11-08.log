@@ -1,0 +1,66 @@
+CRITICAL - 2020-11-08 20:07:51 --> File not found: ../../public/penyimpananFiles/1604886128_9e410a89e84c3de9cde8.docx
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('../../public/pe...')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('../../public/pe...', true)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('../../public/pe...')
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(27): CodeIgniter\HTTP\Response->download('1604886128_9e41...', NULL)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->download()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-11-08 20:12:46 --> File not found: ../../public/penyimpananFiles/1604886128_9e410a89e84c3de9cde8.docx
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('../../public/pe...')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('../../public/pe...', true)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('../../public/pe...')
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(27): CodeIgniter\HTTP\Response->download('1604886128_9e41...', NULL)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->download()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-11-08 20:13:06 --> File not found: /public/penyimpananFiles/1604886128_9e410a89e84c3de9cde8.docx
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('/public/penyimp...')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('/public/penyimp...', true)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('/public/penyimp...')
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(27): CodeIgniter\HTTP\Response->download('1604886128_9e41...', NULL)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->download()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-11-08 20:13:18 --> File not found: public/penyimpananFiles/1604886128_9e410a89e84c3de9cde8.docx
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('public/penyimpa...')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('public/penyimpa...', true)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('public/penyimpa...')
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(27): CodeIgniter\HTTP\Response->download('1604886128_9e41...', NULL)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->download()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-11-08 20:14:27 --> File not found: /penyimpananFiles/1604886128_9e410a89e84c3de9cde8.docx
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('/penyimpananFil...')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('/penyimpananFil...', true)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('/penyimpananFil...')
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(27): CodeIgniter\HTTP\Response->download('1604886128_9e41...', NULL)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->download()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-11-08 20:14:43 --> File not found: /penyimpananFiles/1604886128_9e410a89e84c3de9cde8.docx
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('/penyimpananFil...')
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('/penyimpananFil...', true)
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('/penyimpananFil...')
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(27): CodeIgniter\HTTP\Response->download('1604886128_9e41...', NULL)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->download()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}

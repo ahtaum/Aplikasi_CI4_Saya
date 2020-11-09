@@ -100,7 +100,7 @@ class Login extends BaseController
                 'nama' => $nama,
                 'nik' => $password,
                 'kasta' => $level['dosen'],
-                'slug' => $this->dosen->gabungTabelSpesifik($slug)
+                'dataDosen' => $this->dosen->gabungTabelSpesifik($slug)
             ];
             $session->set($data);
             return $this->response->redirect('/utama');

@@ -24,6 +24,11 @@
           <ul>
             <li class="list-group-item">Validation <span style="color: red;">' ext_in '</span> untuk validasi file yang bukan image, contoh pakai : <span style="color: red;">' ext_in[nama_field,doc,docx] '</span></li>
           </ul>
+          <ul>
+            <form action="dataku/download" method="POST">
+              <button class="btn btn-light" type="submit" name="download">Download</button>
+            </form>
+          </ul>
           <footer class="blockquote-footer">bertekadlah untuk tidak mengharapkan apa yang dimiliki orang lain.<cite title="Source Title"> Muhammad SAW, di dalam kutipan hadis Imam Ahmad.</cite></footer>
         </blockquote>
       </div>

@@ -21,7 +21,7 @@ class MahasiswaModel extends Model
 
     public function gabungTabelSpesifik($nama)
     {
-        return $this->db->table('dosen')->select('mahasiswa.id as idmhs,dosen.id as iddsn,mahasiswa.nama as mhs,dosen.nama,mahasiswa.nim,dosen.nik,mahasiswa.ipk')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->where(['mahasiswa.nama' => $nama])->get()->getResultArray();
+        return $this->db->table('dosen')->select('mahasiswa.id as idmhs,dosen.id as iddsn,mahasiswa.nama as mhs,dosen.nama,mahasiswa.nim,dosen.nik,mahasiswa.ipk,mahasiswa.status')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->where(['mahasiswa.nama' => $nama])->get()->getResultArray();
     }
 
     // kunci

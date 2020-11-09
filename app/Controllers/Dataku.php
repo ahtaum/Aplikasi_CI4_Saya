@@ -19,6 +19,21 @@ class Dataku extends BaseController
         $this->dataMahasiswa = new MahasiswaModel();
         $this->dataDosen = new DosenModel();
         $this->admin = new LoginModel();
+        helper('download');
+    }
+
+    public function download()
+    {
+        return $this->response->download('penyimpananFiles/1604886128_9e410a89e84c3de9cde8.docx', null);
+    }
+
+    public function downloadFile($file, $id)
+    {
+        $fileData = $this->dataMahasiswa->findColumn('file');
+
+        if ($file == $fileData && $this->dataMahasiswa->where('id', $id)->first()) {
+            return $this->response->download('penyimpananFiles/' . $file . 'docx', null);
+        }
     }
 
     public function index()
