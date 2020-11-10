@@ -26,14 +26,14 @@ class Dataku extends BaseController
         return $this->response->download('penyimpananFiles/1604900119_c17313b80c1586172493.docx', null);
     }
 
-    public function downloadFile($file, $id)
-    {
-        $fileData = $this->dataMahasiswa->findColumn('file');
+    // public function downloadFile($file, $id)
+    // {
+    //     $fileData = $this->dataMahasiswa->findColumn('file');
 
-        if ($file == $fileData && $this->dataMahasiswa->where('id', $id)->first()) {
-            return $this->response->download('penyimpananFiles/' . $file . 'docx', null);
-        }
-    }
+    //     if ($file == $fileData && $this->dataMahasiswa->where('id', $id)->first()) {
+    //         return $this->response->download('penyimpananFiles/' . $file . 'docx', null);
+    //     }
+    // }
 
     public function index()
     {
