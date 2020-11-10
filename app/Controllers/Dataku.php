@@ -19,12 +19,11 @@ class Dataku extends BaseController
         $this->dataMahasiswa = new MahasiswaModel();
         $this->dataDosen = new DosenModel();
         $this->admin = new LoginModel();
-        helper('download');
     }
 
     public function download()
     {
-        return $this->response->download('penyimpananFiles/1604886128_9e410a89e84c3de9cde8.docx', null);
+        return $this->response->download('penyimpananFiles/1604900119_c17313b80c1586172493.docx', null);
     }
 
     public function downloadFile($file, $id)
@@ -340,7 +339,13 @@ class Dataku extends BaseController
         $hapusLurrdua = $this->request->getVar('dosenhapus');
 
         if (isset($hapusLurr) == true) {
-            $this->dataMahasiswa->delete($id);
+            $dataFile = $this->dataMahasiswa->find($id);
+            if ($dataFile['file'] == null) {
+                $this->dataMahasiswa->delete($id);
+            } else {
+                $this->dataMahasiswa->delete($id);
+                unlink('penyimpananFiles/' . $dataFile['file']);
+            }
         } else {
             $this->dataDosen->delete($id);
         }

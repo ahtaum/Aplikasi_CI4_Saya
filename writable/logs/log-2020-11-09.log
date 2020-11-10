@@ -1,0 +1,43 @@
+CRITICAL - 2020-11-09 00:26:20 --> unlink(penyimpananFiles/): Is a directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(penyimpa...', 'C:\\xampp\\htdocs...', 343, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(343): unlink('penyimpananFile...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->hapus('79')
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-11-09 00:29:32 --> unlink(penyimpananFiles/): Is a directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(penyimpa...', 'C:\\xampp\\htdocs...', 343, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(343): unlink('penyimpananFile...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->hapus('79')
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-11-09 19:57:55 --> unlink(penyimpananFiles/): Is a directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(penyimpa...', 'C:\\xampp\\htdocs...', 366, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(366): unlink('penyimpananFile...')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->hapus('102')
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-11-09 19:58:45 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(367): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 367, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->hapus('102')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-11-09 20:00:04 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\Aplikasi_CI4_Saya\app\Controllers\Dataku.php(367): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 367, Array)
+#1 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Dataku->hapus('103')
+#2 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataku))
+#3 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Aplikasi_CI4_Saya\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Aplikasi_CI4_Saya\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
