@@ -396,7 +396,14 @@ class Dataku extends BaseController
                 'file' => $namaFile
             ];
 
-            $this->dataMahasiswa->update($id, $data);
+            $cekFile = $this->dataMahasiswa->find($id);
+            if ($cekFile['file'] == null) {
+                $this->dataMahasiswa->update($id, $data);
+            } else {
+                $this->dataMahasiswa->update($id, $data);
+                unlink('penyimpananFiles/' . $cekFile['file']);
+            }
+
             session()->setFlashdata('pesanJudul', 'Data berhasil di ubah.');
             return redirect()->to('/dataku/indexMahasiswa');
         } else {
