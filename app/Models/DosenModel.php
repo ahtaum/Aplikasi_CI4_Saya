@@ -32,9 +32,4 @@ class DosenModel extends Model
     {
         return $this->db->table('dosen')->select('mahasiswa.id as idmhs,mahasiswa.nama as mhs,mahasiswa.nim,mahasiswa.judul,mahasiswa.status,mahasiswa.file')->join('mahasiswa', 'dosen.slug = mahasiswa.slug')->where(['dosen.slug' => $slug])->get()->getResultArray();
     }
-
-    // public function cariDsn($id)
-    // {
-    //     return $this->where(['id' => $id])->first();
-    // }
 }

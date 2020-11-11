@@ -107,7 +107,7 @@
                                         <th scope="col">Judul</th>
                                         <th scope="col">Status</th>
                                         <th scope="col">File</th>
-                                        <th scope="col">Aksi</th>
+                                        <th scope="col"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -120,7 +120,7 @@
                                             <th><?= $k['judul']; ?></th>
                                             <th><?= $k['status']; ?></th>
                                             <th><?= $k['file']; ?></th>
-                                            <th><a class="btn btn-danger mb-4">Vertifikasi</a></th>
+                                            <th><button type="submit" class="btn btn-danger mb-4" name="vetifikasi" <?= $k['file'] == null ? 'disabled' : ''; ?>>Vertifikasi</button></th>
                                             <form action="/dataku/donwloadFile/<?= $k['idmhs']; ?>" method="POST">
                                                 <th><button type="submit" class="btn btn-light" name="donwload" <?= $k['file'] == null ? 'disabled' : ''; ?>>Download</button></th>
                                             </form>

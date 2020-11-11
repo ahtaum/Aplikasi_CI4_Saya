@@ -301,7 +301,8 @@ class Dataku extends BaseController
                 'nim' => $this->request->getVar('nim'),
                 'ipk' => $this->request->getVar('ipk'),
                 'jk' => $this->request->getVar('jk'),
-                'level' => $this->request->getVar('mhs')
+                'level' => $this->request->getVar('mhs'),
+                'status' => 'proposal'
             ]);
         } else {
             $this->dataDosen->save([

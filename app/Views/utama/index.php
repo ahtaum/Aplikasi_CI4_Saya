@@ -19,7 +19,6 @@
             <li class="list-group-item">bug : 2 user yang sama bisa login dalam satu waktu</li>
             <li class="list-group-item text-danger">bug Penting !!! : Masih ada bug karena Session, maka solusinya sesuaikan session nya pada tiap-tiap fitur dan halaman</li>
             <li class="list-group-item text-danger">bug : belum bisa menampilkan file ke web atau ke user</li>
-            <li class="list-group-item text-danger">bug : file harus dihapus jika data file diupdate</li>
           </ul>
           <p>Penting untuk saya : </p>
           <ul>

@@ -8,7 +8,7 @@ use Exception;
 class MahasiswaModel extends Model
 {
     protected $table      = 'mahasiswa';
-    protected $allowedFields = ['nama', 'nim', 'ipk', 'jk', 'level', 'komentar', 'penanda', 'slug', 'judul', 'file'];
+    protected $allowedFields = ['nama', 'nim', 'ipk', 'jk', 'level', 'komentar', 'penanda', 'slug', 'judul', 'file', 'status'];
     protected $useTimestamps = true;
 
     public function getMahasiswaCek($id = false)
