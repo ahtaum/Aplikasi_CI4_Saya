@@ -121,12 +121,9 @@
                                             <th><?= $k['status']; ?></th>
                                             <th><?= $k['file']; ?></th>
                                             <th><a class="btn btn-danger mb-4">Vertifikasi</a></th>
-
                                             <form action="/dataku/donwloadFile/<?= $k['idmhs']; ?>" method="POST">
-                                                <th><button type="submit" class="btn btn-light" name="donwload">Download</button></th>
+                                                <th><button type="submit" class="btn btn-light" name="donwload" <?= $k['file'] == null ? 'disabled' : ''; ?>>Download</button></th>
                                             </form>
-
-
                                         </tr>
                                     <?php endforeach ?>
                                 </tbody>
