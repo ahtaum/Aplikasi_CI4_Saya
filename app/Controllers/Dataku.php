@@ -21,17 +21,26 @@ class Dataku extends BaseController
         $this->admin = new LoginModel();
     }
 
-    public function download()
+    public function donwloadFile($id)
     {
-        return $this->response->download('penyimpananFiles/1604900119_c17313b80c1586172493.docx', null);
+        $fileDownload = $this->dataMahasiswa->find($id);
+        return $this->response->download('penyimpananFiles/' . $fileDownload['file'], null);
     }
 
-    // public function downloadFile($file, $id)
+    // public function donwloadFile($id)
     // {
-    //     $fileData = $this->dataMahasiswa->findColumn('file');
-
-    //     if ($file == $fileData && $this->dataMahasiswa->where('id', $id)->first()) {
-    //         return $this->response->download('penyimpananFiles/' . $file . 'docx', null);
+    //     $fileDownload = $this->dataMahasiswa->find($id);
+    //     if ($fileDownload['file'] == null) {
+    //         return $this->validate([
+    //             'file' => [
+    //                 'rules' => 'required',
+    //                 'errors' => [
+    //                     'required' => '{field} mahasiswa belum mengajukan skripsi'
+    //                 ]
+    //             ]
+    //         ]);
+    //     } else {
+    //         return $this->response->download('penyimpananFiles/' . $fileDownload['file'], null);
     //     }
     // }
 
@@ -61,7 +70,8 @@ class Dataku extends BaseController
 
         $data = [
             'title' => 'saya sayang ibuku',
-            'bimbinganMhs' => $this->dataDosen->gabungTabel()
+            'bimbinganMhs' => $this->dataDosen->gabungTabel(),
+            'validasiDownload' => \Config\Services::validation()
         ];
 
         return view('data/indexmhs', $data);

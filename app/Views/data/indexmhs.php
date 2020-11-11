@@ -121,7 +121,12 @@
                                             <th><?= $k['status']; ?></th>
                                             <th><?= $k['file']; ?></th>
                                             <th><a class="btn btn-danger mb-4">Vertifikasi</a></th>
-                                            <th><a class="btn btn-light mb-4">Download</a></th>
+
+                                            <form action="/dataku/donwloadFile/<?= $k['idmhs']; ?>" method="POST">
+                                                <th><button type="submit" class="btn btn-light" name="donwload">Download</button></th>
+                                            </form>
+
+
                                         </tr>
                                     <?php endforeach ?>
                                 </tbody>
@@ -129,22 +134,6 @@
                         </div>
                     </div>
                 </div>
-
-
-                <!-- <div class="card">
-                    <div class="card-body">
-                        <table class="table table-dark">
-                            <thead>
-                                <tr>
-                                    <th scope="col">id</th>
-                                    <th scope="col">Nama Mahasiswa</th>
-                                    <th scope="col">Nim</th>
-                                    <th scope="col">Judul</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div> -->
 
             <?php } ?>
 
